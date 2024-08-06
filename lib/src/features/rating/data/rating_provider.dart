@@ -10,64 +10,55 @@ class RatingProvider extends ChangeNotifier {
     if (_rating < 2.5) return 'NOT BAD';
     return 'GOOD';
   }
-
+  /// Emoji image based on the rating value
   Widget get ratingEmoji {
-    if (_rating < 1.5) {
-      return Image.asset(
-        'assets/images/bad.png',
-        key: const ValueKey('bad'),
-        width: 300,
-        height: 300,
-      );
-    } else if (_rating < 2.5) {
-      return Image.asset(
-        'assets/images/notbad.png',
-        key: const ValueKey('not bad'),
-        width: 300,
-        height: 300,
-      );
-    } else {
-      return Image.asset(
-        'assets/images/good.png',
-        key: const ValueKey('good'),
-        width: 300,
-        height: 300,
-      );
-    }
+    return Image.asset(
+      _getImagePath(),
+      key: ValueKey(_ratingTextKey()),
+      width: 300,
+      height: 300,
+    );
   }
+  /// Colors for the rating screen based on the rating value
+  Color get textColor => _getColor(0xffAB3315, 0xffA36D08, 0xff113600);
 
-  Color get textColor {
-    if (_rating < 1.5) {
-      return const Color(0xffAB3315);
-    } else if (_rating < 2.5) {
-      return const Color(0xffA36D08);
-    } else {
-      return const Color(0xff113600);
-    }
-  }
+  Color get labelColor => _getColor(0xffF9B8A7, 0xffF7D390, 0xffA6BA50);
 
-  Color get labelColor {
-    if (_rating < 1.5) {
-      return const Color(0xffF9B8A7);
-    } else if (_rating < 2.5) {
-      return const Color(0xffF7D390);
-    } else {
-      return const Color(0xffA6BA50);
-    }
-  }
-
-  Color get backgroundColor {
-    if (_rating < 1.5) {
-      return const Color(0xffFD8263);
-    } else if (_rating < 2.5) {
-      return const Color(0xffE1AD4B);
-    } else {
-      return const Color(0xffAFC55C);
-    }
-  }
+  Color get backgroundColor => _getColor(0xffFD8263, 0xffE1AD4B, 0xffAFC55C);
 
   void setRating(double newRating) {
-    _rating = newRating;
-    notifyListeners();
+    if (newRating >= 0.0 && newRating <= 5.0) {
+      _rating = newRating;
+      notifyListeners();
+    } else {
+      throw ArgumentError('Rating must be between 0.0 and 5.0');
+    }
+  }
+  /// Image path based on the rating value
+  String _getImagePath() {
+    if (_rating < 1.5) {
+      return 'assets/images/bad.png';
+    } else if (_rating < 2.5) {
+      return 'assets/images/notbad.png';
+    } else {
+      return 'assets/images/good.png';
+    }
+  }
+  /// Text key based on the rating value
+  String _ratingTextKey() {
+    if (_rating < 1.5) return 'bad';
+    if (_rating < 2.5) return 'not bad';
+    return 'good';
+  }
+
+  Color _getColor(int lowRatingColor, int midRatingColor, int highRatingColor) {
+    if (_rating < 1.5) {
+      return Color(lowRatingColor);
+    } else if (_rating < 2.5) {
+      return Color(midRatingColor);
+    } else {
+      return Color(highRatingColor);
+    }
   }
 }
+

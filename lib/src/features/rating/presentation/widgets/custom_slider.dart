@@ -51,3 +51,4 @@ class CustomSlider extends StatelessWidget {
     );
   }
 }
+

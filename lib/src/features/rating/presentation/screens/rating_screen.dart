@@ -2,12 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rate_experience/src/features/rating/data/rating_provider.dart';
 import 'package:rate_experience/src/features/rating/presentation/widgets/custom_slider.dart';
+import 'package:rate_experience/src/features/rating/presentation/widgets/rating_text_field.dart';
 
-import '../widgets/rating_text_field.dart';
 
-class RatingScreen extends StatelessWidget {
+
+class RatingScreen extends StatefulWidget {
   const RatingScreen({super.key});
 
+  @override
+  State<RatingScreen> createState() => _RatingScreenState();
+}
+
+class _RatingScreenState extends State<RatingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,9 +81,9 @@ class RatingScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  const CustomSlider(),
+                  const CustomSlider(), // Ensure CustomSlider is defined elsewhere
                   const SizedBox(height: 90),
-                  const RatingTextField(),
+                  const RatingTextField(), // Ensure RatingTextField is defined elsewhere
                 ],
               ),
             ),
