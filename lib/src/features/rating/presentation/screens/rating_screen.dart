@@ -4,8 +4,6 @@ import 'package:rate_experience/src/features/rating/data/rating_provider.dart';
 import 'package:rate_experience/src/features/rating/presentation/widgets/custom_slider.dart';
 import 'package:rate_experience/src/features/rating/presentation/widgets/rating_text_field.dart';
 
-
-
 class RatingScreen extends StatefulWidget {
   const RatingScreen({super.key});
 
@@ -81,9 +79,9 @@ class _RatingScreenState extends State<RatingScreen> {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  const CustomSlider(), // Ensure CustomSlider is defined elsewhere
+                  const CustomSlider(),
                   const SizedBox(height: 90),
-                  const RatingTextField(), // Ensure RatingTextField is defined elsewhere
+                  const RatingTextField(),
                 ],
               ),
             ),

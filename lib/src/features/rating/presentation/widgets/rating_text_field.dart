@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rate_experience/src/features/rating/data/rating_provider.dart';
 
-
 class RatingTextField extends StatefulWidget {
   const RatingTextField({super.key});
 
@@ -67,7 +66,8 @@ class _RatingTextFieldState extends State<RatingTextField> {
                       bottom: 0,
                       child: ElevatedButton(
                         onPressed: () {
-                          // Action à effectuer lors de l'appui sur le bouton Submit
+                          // provider.addRating(_controller.text);
+                          // _controller.clear();
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: provider.textColor,
@@ -92,4 +92,3 @@ class _RatingTextFieldState extends State<RatingTextField> {
     );
   }
 }
-
