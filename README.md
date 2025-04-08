@@ -52,7 +52,11 @@ Une application Flutter interactive permettant aux utilisateurs d'évaluer leur 
 
 ## Captures d'écran
 
-[Insérez des captures d'écran de l'application ici]
+
+
+https://github.com/user-attachments/assets/c16992d5-41bf-4e95-a8f6-c6951d3fd8e7
+
+
 
 ## Contribution
 
