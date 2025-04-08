@@ -3,8 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:rate_experience/src/features/rating/data/rating_provider.dart';
 import 'package:rate_experience/src/features/rating/presentation/screens/rating_screen.dart';
 
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 
 void main() {

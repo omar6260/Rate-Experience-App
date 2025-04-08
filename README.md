@@ -1,16 +1,63 @@
-# rate_experience
+# Rate Experience
 
-A new Flutter project.
+## Description
 
-## Getting Started
+Une application Flutter interactive permettant aux utilisateurs d'évaluer leur expérience d'achat avec des animations attrayantes. Ce projet a été créé pour le plaisir et pour explorer les capacités d'animation de Flutter.
 
-This project is a starting point for a Flutter application.
+## Fonctionnalités
 
-A few resources to get you started if this is your first Flutter project:
+- Interface utilisateur intuitive pour l'évaluation d'expériences
+- Animations fluides lors des interactions
+- Système de notation avec retour visuel
+- Design moderne et réactif
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Technologies utilisées
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter
+- Provider pour la gestion d'état
+- Animations personnalisées
+
+## Installation
+
+1. Clonez ce dépôt
+
+   ```
+   git clone https://github.com/votre-nom/rate_experience.git
+   ```
+
+2. Naviguez dans le répertoire du projet
+
+   ```
+   cd rate_experience
+   ```
+
+3. Installez les dépendances
+
+   ```
+   flutter pub get
+   ```
+
+4. Lancez l'application
+
+   ```
+   flutter run
+   ```
+
+## Structure du projet
+
+- `lib/main.dart` - Point d'entrée de l'application
+- `lib/src/features/rating` - Fonctionnalités liées à l'évaluation
+  - `data` - Gestion des données et providers
+  - `presentation` - Écrans et widgets UI
+
+## Captures d'écran
+
+[Insérez des captures d'écran de l'application ici]
+
+## Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou à soumettre une pull request.
+
+## Licence
+
+Ce projet est sous licence MIT.
